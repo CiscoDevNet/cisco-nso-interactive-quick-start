@@ -1,6 +1,6 @@
 # Cisco NSO interactive Quick Start
 
-Cisco Code Exchange provides the ability to run examples in a browser-based integrated development environment (IDE). We are bringing now the ability to run NSO on top it. 
+Explore and experiment with NSO on Cisco Code Exchange, where you can easily run examples in a browser-based integrated development environment (IDE).
 
 ## Get Started
 
