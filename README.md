@@ -1,18 +1,18 @@
-# Cisco NSO interactive Quick Start
+# Cisco NSO Interactive Quick Start
 
-Explore and experiment the world of NSO on Cisco Code Exchange, where you can dive right in and try out examples in a user-friendly browser-based integrated development environment (IDE).
+Explore and experiment with the world of NSO on Cisco Code Exchange, where you can dive right in and try out examples in a user-friendly browser-based integrated development environment (IDE).
 
-But wait, there's more! You can also contribute your own examples and share them with everyone. The best part is, your peers can play with your examples without having to install anything.
+But wait, there's more! You can also contribute your examples and share them with everyone. The best part is your peers can play with your examples without installing anything.
 
 ## How can I add my own example?
 
-1. Simply, submit your repo on <https://developer.cisco.com/codeexchange/submit/>
+1. Simply submit your repo on <https://developer.cisco.com/codeexchange/submit/>
 2. Once your submission is approved, your repository will be featured on the [Cisco Cloud IDE](https://developer.cisco.com/codeexchange/search/?complexity=devenv)
 3. That's it! Now you can start exploring, playing, and sharing your awesome examples. Let the creativity flow!
 
 ## Need an example?
 
-This short example will demostrate how you can setup a simulated network of Cisco-ios routers and how to manage these with NCS in Code Exchange Cloud IDE. NCS will talk Cisco CLI towards the routers.
+This short example will demonstrate how to set up a simulated network of Cisco IOS routers and manage these with NSO in Code Exchange Cloud IDE. NSO will talk Cisco CLI towards the routers.
 
 Prepare NSO
 
@@ -32,7 +32,6 @@ Configure NSO
 ```bash
 ncs_cli -C -u admin
 devices sync-from
-devices device ios1 check-sync
 config
 show full-configuration devices device ios1 config | nomore
 devices device ios0 config
@@ -42,9 +41,9 @@ commit dry-run outformat native
 commit
 ```
 
-### Explore and play with NSO Example Collection
+### Explore and play with the NSO Example Collection
 
-Go to `~/nso-6.1.2.1` > `examples.ncs` in VS Code workspace or use the terminal
+Go to `$NCS_DIR` > `examples.ncs` in the VS Code workspace or use the terminal
 
 ```bash
 cd $NCS_DIR/examples.ncs/
@@ -77,10 +76,10 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
 
 ## FAQ
 
-- What NSO install type is using?
+- What NSO install type is used?
   - NSO local install. But System install is in the pipeline.
 - What NEDs come with the container?
-  - Example NEDs. These should be considered as examples. Any NEDs present in the container is only in order to run the simulated networks. Do not use these for real devices.   
+  - Example NEDs. These should be considered as examples. NEDs in the container are only used to run the simulated networks. Do not use these with real devices.   
     ```bash
     developer:~ > ls -1 $NCS_DIR/packages/neds/
     a10-acos-cli-3.0
@@ -97,6 +96,6 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
     10
     developer:~ >
     ```
-- My code is approved but I don't see it?
+- My code is approved, but I don't see it?
   - Expand the `/home/developer/src` in the workspace
   - or do `ls -l /home/developer/src`
