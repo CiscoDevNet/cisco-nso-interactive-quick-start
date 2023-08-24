@@ -78,7 +78,25 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
 ## FAQ
 
 - What NSO install type is using?
-  - NSO local install. But system install is in the pipeline.
+  - NSO local install. But System install is in the pipeline.
+- What NEDs come with the container?
+  - Example NEDs. These should be considered as examples. Any NEDs present in the container is only in order to run the simulated networks. Do not use these for real devices.   
+    ```bash
+    developer:~ > ls -1 ~/nso-6.1.2.1/packages/neds
+    a10-acos-cli-3.0
+    alu-sr-cli-3.4
+    cisco-asa-cli-6.6
+    cisco-ios-cli-3.0
+    cisco-ios-cli-3.8
+    cisco-iosxr-cli-3.0
+    cisco-iosxr-cli-3.5
+    cisco-nx-cli-3.0
+    dell-ftos-cli-3.0
+    juniper-junos-nc-3.0
+    developer:~ > ls -1 ~/nso-6.1.2.1/packages/neds | wc -l
+    10
+    developer:~ > 
+    ```
 - My code is approved but I don't see it?
   - Expand the `/home/developer/src` in the workspace
   - or do `ls -l /home/developer/src`
