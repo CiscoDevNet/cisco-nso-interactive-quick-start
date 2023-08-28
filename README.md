@@ -1,8 +1,26 @@
 # Cisco NSO Interactive Quick Start
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/)
+
 Explore and experiment with the world of NSO on Cisco Code Exchange, where you can dive right in and try out examples in a user-friendly browser-based integrated development environment (IDE).
 
 But wait, there's more! You can also contribute your examples and share them with everyone. The best part is your peers can play with your examples without installing anything.
+
+If you are new to NSO, start with [NSO learning labs](https://developer.cisco.com/learning/search/?contentType=track,module,lab&keyword=nso&sortBy=luceneScore) where you will find step by step guides prepared by Cisco.
+
+## Explore
+
+[Run this project using the Cisco Exchange Dev environment](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/)
+
+To start the environment, click on the **Run in Cloud IDE** button on the right side of the Repo title.
+
+![Run in Cloud IDE](img/run_in_cloud_ide.png)
+
+Once you click the **Run in Cloud IDE** button, you will see a VS Code instance prepared with the Git repo clone. **You will find your code under the ~/src directory**
+
+> Note: Click on the **src** directory to expand it and see the code of the repo cloned. **Pay attention to the directory structure of the workspace.**
+
+![vscode instance](img/expand_src_dir.png)
 
 ## How can I add my own example?
 
@@ -12,34 +30,65 @@ But wait, there's more! You can also contribute your examples and share them wit
 
 ## Need an example?
 
+Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the **VS Code terminal.**
+
+![vscode terminal](img/vscode_terminal.png)
+
 This short example will demonstrate how to set up a simulated network of Cisco IOS routers and manage these with NSO in Code Exchange Cloud IDE. NSO will talk Cisco CLI towards the routers.
 
-Prepare NSO
+> If you want to see a detailed explanation of the commands below see [NSO Intro Learning Lab](https://developer.cisco.com/learning/labs/nso-intro/introduction/)
 
-```bash
-source $NCS_DIR/ncsrc
-ncs-netsim --dir ~/example/netsim create-network cisco-ios-cli-3.8 2 ios
-ncs-setup --dest ~/example --netsim-dir ~/example/netsim
-cd ~/example/
-ncs-netsim start
-ncs
-ncs --version
-ncs --status | grep -i status
-```
+1. Prepare NSO
 
-Configure NSO
+   ```bash
+   source $NCS_DIR/ncsrc
+   ncs-netsim --dir ~/example/netsim create-network cisco-ios-cli-3.8 2 ios
+   ncs-setup --dest ~/example --netsim-dir ~/example/netsim
+   ```
 
-```bash
-ncs_cli -C -u admin
-devices sync-from
-config
-show full-configuration devices device ios1 config | nomore
-devices device ios0 config
-ios:hostname nso.cisco.com
-top
-commit dry-run outformat native
-commit
-```
+2. Start netsim
+
+   ```bash
+   cd ~/example/
+   ncs-netsim start
+   ```
+
+3. Start NSO
+
+   ```bash
+   ncs
+   ```
+
+4. Review NSO status
+
+   ```bash
+   ncs --version
+   ncs --status | grep -i status
+   ```
+
+5. Enter NSO and learn the configuration of `ios0`.
+
+   ```bash
+   ncs_cli -C -u admin
+   devices sync-from
+   ```
+
+6. See the configuration of `ios0` and change the hostname.
+
+   ```bash
+   config
+   show full-configuration devices device ios1 config | nomore
+   devices device ios0 config
+   ios:hostname nso.cisco.com
+   ```
+
+7. Finally see what NSO will send to the device and commit the changes.
+
+   ```bash
+   top
+   commit dry-run outformat native
+   commit
+   ```
 
 ### Explore and play with the NSO Example Collection
 
@@ -73,13 +122,21 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
 ## Recommendations
 
 - It is recommended to avoid specifying NSO versions in the code, as the underlying NSO will be upgraded with newer releases.
+- As seen in the examples use environment variables when developing.
+  - `$NCS_DIR` is a handy environment variable.
+  - Use `env | grep -i ncs` to see the environment variables available by `ncs`.
+- The directory structure of the workspace matters, consider it when creating an example.
+- Use the **preview** feature (right click) in VS Code to the see the markdown files formatted.
+  ![markdown file](img/preview_md.png)
 
 ## FAQ
 
 - What NSO install type is used?
   - NSO local install. But System install is in the pipeline.
 - What NEDs come with the container?
-  - Example NEDs. These should be considered as examples. NEDs in the container are only used to run the simulated networks. Do not use these with real devices.   
+
+  - Example NEDs. These should be considered as examples. NEDs in the container are only used to run the simulated networks. Do not use these with real devices.
+
     ```bash
     developer:~ > ls -1 $NCS_DIR/packages/neds/
     a10-acos-cli-3.0
@@ -96,6 +153,7 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
     10
     developer:~ >
     ```
+
 - My code is approved, but I don't see it?
   - Expand the `/home/developer/src` in the workspace
   - or do `ls -l /home/developer/src`
