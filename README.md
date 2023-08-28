@@ -4,6 +4,10 @@ Explore and experiment with the world of NSO on Cisco Code Exchange, where you c
 
 But wait, there's more! You can also contribute your examples and share them with everyone. The best part is your peers can play with your examples without installing anything.
 
+To start the environment, click on the **Run in Cloud IDE** button on the right side of the Repo title.
+
+<img src="img/run_in_cloud_ide.png" width="200" alt="Run in Cloud IDE">
+
 ## How can I add my own example?
 
 1. Simply submit your repo on <https://developer.cisco.com/codeexchange/submit/>
@@ -79,7 +83,9 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
 - What NSO install type is used?
   - NSO local install. But System install is in the pipeline.
 - What NEDs come with the container?
-  - Example NEDs. These should be considered as examples. NEDs in the container are only used to run the simulated networks. Do not use these with real devices.   
+
+  - Example NEDs. These should be considered as examples. NEDs in the container are only used to run the simulated networks. Do not use these with real devices.
+
     ```bash
     developer:~ > ls -1 $NCS_DIR/packages/neds/
     a10-acos-cli-3.0
@@ -96,6 +102,7 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
     10
     developer:~ >
     ```
+
 - My code is approved, but I don't see it?
   - Expand the `/home/developer/src` in the workspace
   - or do `ls -l /home/developer/src`
