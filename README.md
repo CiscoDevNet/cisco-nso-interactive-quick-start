@@ -4,6 +4,8 @@ Explore and experiment with the world of NSO on Cisco Code Exchange, where you c
 
 But wait, there's more! You can also contribute your examples and share them with everyone. The best part is your peers can play with your examples without installing anything.
 
+If you are new to NSO, start with [NSO learning labs](https://developer.cisco.com/learning/search/?contentType=track,module,lab&keyword=nso&sortBy=luceneScore) where you will find step by step guides prepared by Cisco.
+
 ## Explore
 
 [Run this project using the Cisco Exchange Dev environment](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/)
@@ -11,6 +13,12 @@ But wait, there's more! You can also contribute your examples and share them wit
 To start the environment, click on the **Run in Cloud IDE** button on the right side of the Repo title.
 
 ![Run in Cloud IDE](img/run_in_cloud_ide.png)
+
+Once you click the **Run in Cloud IDE** button, you will see a VS Code instance prepared with the Git repo clone. **You will find your code under the ~/src directory**
+
+> Note: Click on the **src** directory to expand it and see the code of the repo cloned.
+
+![vscode instance](img/expand_src_dir.png)
 
 ## How can I add my own example?
 
@@ -20,34 +28,63 @@ To start the environment, click on the **Run in Cloud IDE** button on the right 
 
 ## Need an example?
 
+Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the VS Code terminal.
+
 This short example will demonstrate how to set up a simulated network of Cisco IOS routers and manage these with NSO in Code Exchange Cloud IDE. NSO will talk Cisco CLI towards the routers.
 
-Prepare NSO
+> If you want to see a detailed explanation of the commands below see [NSO Intro Learning Lab](https://developer.cisco.com/learning/labs/nso-intro/introduction/)
 
-```bash
-source $NCS_DIR/ncsrc
-ncs-netsim --dir ~/example/netsim create-network cisco-ios-cli-3.8 2 ios
-ncs-setup --dest ~/example --netsim-dir ~/example/netsim
-cd ~/example/
-ncs-netsim start
-ncs
-ncs --version
-ncs --status | grep -i status
-```
+1. Prepare NSO
 
-Configure NSO
+   ```bash
+   source $NCS_DIR/ncsrc
+   ncs-netsim --dir ~/example/netsim create-network cisco-ios-cli-3.8 2 ios
+   ncs-setup --dest ~/example --netsim-dir ~/example/netsim
+   ```
 
-```bash
-ncs_cli -C -u admin
-devices sync-from
-config
-show full-configuration devices device ios1 config | nomore
-devices device ios0 config
-ios:hostname nso.cisco.com
-top
-commit dry-run outformat native
-commit
-```
+2. Start netsim
+
+   ```bash
+   cd ~/example/
+   ncs-netsim start
+   ```
+
+3. Start NSO
+
+   ```bash
+   ncs
+   ```
+
+4. Review NSO status
+
+   ```bash
+   ncs --version
+   ncs --status | grep -i status
+   ```
+
+5. Enter NSO and learn the configuration of `ios0`.
+
+   ```bash
+   ncs_cli -C -u admin
+   devices sync-from
+   ```
+
+6. See the configuration of `ios0` and change the hostname.
+
+   ```bash
+   config
+   show full-configuration devices device ios1 config | nomore
+   devices device ios0 config
+   ios:hostname nso.cisco.com
+   ```
+
+7. Finally see what NSO will send to the device and commit the changes.
+
+   ```bash
+   top
+   commit dry-run outformat native
+   commit
+   ```
 
 ### Explore and play with the NSO Example Collection
 
