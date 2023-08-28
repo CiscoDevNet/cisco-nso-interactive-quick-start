@@ -16,7 +16,7 @@ To start the environment, click on the **Run in Cloud IDE** button on the right 
 
 Once you click the **Run in Cloud IDE** button, you will see a VS Code instance prepared with the Git repo clone. **You will find your code under the ~/src directory**
 
-> Note: Click on the **src** directory to expand it and see the code of the repo cloned.
+> Note: Click on the **src** directory to expand it and see the code of the repo cloned. **Pay attention to the directory structure of the workspace.**
 
 ![vscode instance](img/expand_src_dir.png)
 
@@ -28,7 +28,9 @@ Once you click the **Run in Cloud IDE** button, you will see a VS Code instance 
 
 ## Need an example?
 
-Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the VS Code terminal.
+Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the **VS Code terminal.**
+
+![vscode terminal](img/vscode_terminal.png)
 
 This short example will demonstrate how to set up a simulated network of Cisco IOS routers and manage these with NSO in Code Exchange Cloud IDE. NSO will talk Cisco CLI towards the routers.
 
@@ -118,6 +120,10 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
 ## Recommendations
 
 - It is recommended to avoid specifying NSO versions in the code, as the underlying NSO will be upgraded with newer releases.
+- As seen in the examples use environment variables when developing.
+  - `$NCS_DIR` is a handy environment variable.
+  - Use `env | grep -i ncs` to see the environment variables available by `ncs`.
+- The directory structure of the workspace matters, consider it when creating an example.
 
 ## FAQ
 
