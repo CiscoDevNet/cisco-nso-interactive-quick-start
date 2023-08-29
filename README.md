@@ -28,6 +28,10 @@ Once you click the **Run in Cloud IDE** button, you will see a VS Code instance 
 2. Once your submission is approved, your repository will be featured on the [Cisco Cloud IDE](https://developer.cisco.com/codeexchange/search/?complexity=devenv)
 3. That's it! Now you can start exploring, playing, and sharing your awesome examples. Let the creativity flow!
 
+## Need help?
+
+[Open an issue on this repository](https://github.com/CiscoDevNet/cisco-nso-interactive-quick-start/issues) to ask for help, share feedback or request new features. 
+
 ## Need an example?
 
 Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the **VS Code terminal.**
