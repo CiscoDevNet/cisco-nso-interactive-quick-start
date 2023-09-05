@@ -1,6 +1,6 @@
 # Cisco NSO Interactive Quick Start
 
-[![Run in Cisco Cloud IDE](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-runable-icon.svg)](https://developer.cisco.com/codeexchange/devenv/jillesca/open_telemetry_network_impact/)
+[![Run in Cisco Cloud IDE](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-runable-icon.svg)](https://developer.cisco.com/codeexchange/devenv/CiscoDevNet/cisco-nso-interactive-quick-start)
 
 Explore and experiment with the world of NSO on Cisco Code Exchange, where you can dive right in and try out examples in a user-friendly browser-based integrated development environment (IDE).
 
@@ -10,9 +10,9 @@ If you are new to NSO, start with [NSO learning labs](https://developer.cisco.co
 
 ## Explore
 
-[Run this project using the Cisco Exchange Dev environment](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/)
+Click [here to start directly using Cisco Cloud IDE](https://developer.cisco.com/codeexchange/devenv/CiscoDevNet/cisco-nso-interactive-quick-start)
 
-To start the environment, click on the **Run in Cloud IDE** button on the right side of the Repo title.
+Or go to [Cisco Code Exchange](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/) and start the environment. Click on the **Run in Cloud IDE** button on the right side of the Repo title.
 
 ![Run in Cloud IDE](img/run_in_cloud_ide.png)
 
