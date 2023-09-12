@@ -14,13 +14,13 @@ Click [here to start using Cisco Cloud IDE](https://developer.cisco.com/codeexch
 
 Or go to [Cisco Code Exchange](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/) and start the environment. Click on the **Run in Cloud IDE** button on the right side of the Repo title.
 
-<img src="img/run_in_cloud_ide.png" width="800px" height="auto" alt="Run in Cloud IDE">
+<img src="img/run_in_cloud_ide.png" width="1000px" height="auto" alt="Run in Cloud IDE">
 
 Once you click the **Run in Cloud IDE** button, you will see a VS Code instance prepared with the Git repo clone. **You will find your code under the ~/src directory**
 
 > Note: Click on the **src** directory to expand it and see the code of the repo cloned. **Pay attention to the directory structure of the workspace.**
 
-<img src="img/expand_src_dir.png" width="800px" height="auto" alt="vscode instance">
+<img src="img/expand_src_dir.png" width="1000px" height="auto" alt="vscode instance">
 
 ## How can I add my own example?
 
@@ -36,7 +36,7 @@ Once you click the **Run in Cloud IDE** button, you will see a VS Code instance 
 
 Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the **VS Code terminal.**
 
-<img src="img/vscode_terminal.png" width="800px" height="auto" alt="vscode terminal">
+<img src="img/vscode_terminal.png" width="1000px" height="auto" alt="vscode terminal">
 
 This short example will demonstrate how to set up a simulated network of Cisco IOS routers and manage these with NSO in Code Exchange Cloud IDE. NSO will talk Cisco CLI towards the routers.
 
@@ -132,7 +132,7 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
 - The directory structure of the workspace matters, consider it when creating an example.
 - Use the **preview** feature (right click) in VS Code to the see the markdown files formatted.
 
-   <img src="img/preview_md.png" width="800px" height="auto" alt="markdown file">
+   <img src="img/preview_md.png" width="1000px" height="auto" alt="markdown file">
 
 ## FAQ
 
