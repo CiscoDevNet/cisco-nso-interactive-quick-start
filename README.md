@@ -10,17 +10,17 @@ If you are new to NSO, start with [NSO learning labs](https://developer.cisco.co
 
 ## Explore
 
-Click [here to start directly using Cisco Cloud IDE](https://developer.cisco.com/codeexchange/devenv/CiscoDevNet/cisco-nso-interactive-quick-start)
+Click [here to start using Cisco Cloud IDE](https://developer.cisco.com/codeexchange/devenv/CiscoDevNet/cisco-nso-interactive-quick-start)
 
 Or go to [Cisco Code Exchange](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/cisco-nso-interactive-quick-start/) and start the environment. Click on the **Run in Cloud IDE** button on the right side of the Repo title.
 
-![Run in Cloud IDE](img/run_in_cloud_ide.png)
+<img src="img/run_in_cloud_ide.png" width="800px" height="auto" alt="Run in Cloud IDE">
 
 Once you click the **Run in Cloud IDE** button, you will see a VS Code instance prepared with the Git repo clone. **You will find your code under the ~/src directory**
 
 > Note: Click on the **src** directory to expand it and see the code of the repo cloned. **Pay attention to the directory structure of the workspace.**
 
-![vscode instance](img/expand_src_dir.png)
+<img src="img/expand_src_dir.png" width="800px" height="auto" alt="vscode instance">
 
 ## How can I add my own example?
 
@@ -30,13 +30,13 @@ Once you click the **Run in Cloud IDE** button, you will see a VS Code instance 
 
 ## Need help?
 
-[Open an issue on this repository](https://github.com/CiscoDevNet/cisco-nso-interactive-quick-start/issues) to ask for help, share feedback or request new features. 
+[Open an issue on this repository](https://github.com/CiscoDevNet/cisco-nso-interactive-quick-start/issues) to ask for help, share feedback or request new features.
 
 ## Need an example?
 
 Try the example below to get familiar with the Cloud IDE Environment. Copy or type the commands below into the **VS Code terminal.**
 
-![vscode terminal](img/vscode_terminal.png)
+<img src="img/vscode_terminal.png" width="800px" height="auto" alt="vscode terminal">
 
 This short example will demonstrate how to set up a simulated network of Cisco IOS routers and manage these with NSO in Code Exchange Cloud IDE. NSO will talk Cisco CLI towards the routers.
 
@@ -131,7 +131,8 @@ drwxr-xr-x 1 developer ncsadmin    31 Jun 28 11:05 web-ui
   - Use `env | grep -i ncs` to see the environment variables available by `ncs`.
 - The directory structure of the workspace matters, consider it when creating an example.
 - Use the **preview** feature (right click) in VS Code to the see the markdown files formatted.
-  ![markdown file](img/preview_md.png)
+
+   <img src="img/preview_md.png" width="800px" height="auto" alt="markdown file">
 
 ## FAQ
 
