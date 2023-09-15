@@ -2,6 +2,15 @@
 
 [![Run in Cisco Cloud IDE](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-runable-icon.svg)](https://developer.cisco.com/codeexchange/devenv/CiscoDevNet/cisco-nso-interactive-quick-start)
 
+Hi, you found the original repository created when we were preparing the lauch of **NSO Playground.** Since this repo was created the name was changed and we added a new NSO variant.
+
+See the repos that will be used from now on:
+
+- <https://github.com/CiscoDevNet/NSO-Playground-Local-Install>
+- <https://github.com/CiscoDevNet/NSO-Playground-System-Install>
+
+<hr>
+
 Explore and experiment with the world of NSO on Cisco Code Exchange, where you can dive right in and try out examples in a user-friendly browser-based integrated development environment (IDE).
 
 But wait, there's more! You can also contribute your examples and share them with everyone. The best part is your peers can play with your examples without installing anything.
@@ -30,7 +39,7 @@ Once you click the **Run in Cloud IDE** button, you will see a VS Code instance 
 
 ## Need help?
 
-[Open an issue on this repository](https://github.com/CiscoDevNet/cisco-nso-interactive-quick-start/issues) to ask for help, share feedback or request new features.
+Open an issue on [NSO-Playground-Local-Install](https://github.com/CiscoDevNet/NSO-Playground-Local-Install/issues) to ask for help, share feedback or request new features.
 
 ## Need an example?
 
