@@ -4,7 +4,7 @@
 
 Hi, you found the original repository created when we were preparing the lauch of **NSO Playground.** Since this repo was created the name was changed and we added a new NSO variant.
 
-See the repos that will be use from now on:
+See the repos that will be used from now on:
 
 - <https://github.com/CiscoDevNet/NSO-Playground-Local-Install>
 - <https://github.com/CiscoDevNet/NSO-Playground-System-Install>
